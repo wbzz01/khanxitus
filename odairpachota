@@ -1,3 +1,4 @@
+
 const ver = "V3.0.2";
 
 let device = {
@@ -180,7 +181,7 @@ function setupMenu() {
             { name: 'customBanner', type: 'checkbox', variable: 'features.customBanner', labeled: true, label: 'Custom Banner' },
             { name: 'rgbLogo', type: 'checkbox', variable: 'features.rgbLogo', labeled: true, label: 'RGB Logo' }],
             [{ name: 'darkMode', type: 'checkbox', variable: 'features.darkMode', attributes: 'checked', labeled: true, label: 'Dark Mode' },
-            { name: 'wbzz', type: 'checkbox', variable: 'features.onekoJs', labeled: true, label: 'wbzz' }]
+            { name: 'onekoJs', type: 'checkbox', variable: 'features.onekoJs', labeled: true, label: 'onekoJs' }]
         ]
         if (!device.apple) {
             featuresList.push(
@@ -191,7 +192,7 @@ function setupMenu() {
         featuresList.push([{ name: `${user.username} - UID: ${user.UID}`, type: 'nonInput', attributes: 'style="font-size:10px;"padding-left:5px;' }]);
 
         addFeature(featuresList);
-        handleInput(['questionSpoof', 'pular video', 'mostrar resposta', 'próxima recomendação', 'repetir questão', 'minuteFarm', 'customBanner', 'rgbLogo']);
+        handleInput(['questionSpoof', 'videoSpoof', 'showAnswers', 'nextRecomendation', 'repeatQuestion', 'minuteFarm', 'customBanner', 'rgbLogo']);
         if (!device.apple){
             handleInput(['customName', 'customPfp'])
         }
@@ -425,3 +426,4 @@ loadScript('https://cdn.jsdelivr.net/npm/toastify-js', 'toastifyPlugin')
     setupMenu();
     setupMain();
     console.clear();
+})
